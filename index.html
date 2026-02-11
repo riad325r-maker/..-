@@ -24,15 +24,16 @@
 
     /* --- تعديل القلوب هنا --- */
     .bg-hearts { position: absolute; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
-    .bg-heart { 
+        .bg-heart { 
         position: absolute; 
         bottom: -50px; 
-        color: #ffffff; /* لون أبيض صافي */
-        text-shadow: 0 0 10px rgba(255,255,255,0.8); /* زيادة الوضوح */
-        font-size: 25px;
-        animation: floatUp 8s linear infinite; 
-        opacity: 0.9 !important; /* خليتها ظاهرة أكثر */
+        /* اللون الأبيض مع شفافية 0.3 فقط */
+        color: rgba(255, 255, 255, 0.6); 
+        font-size: 20px;
+        animation: floatUp 10s linear infinite; 
+        text-shadow: none; /* إزالة التوهج عشان تظل شفافة */
     }
+
     
     @keyframes floatUp {
         0% { transform: translateY(0) rotate(0deg); opacity: 0; }
@@ -108,7 +109,7 @@
         }, 1500);
     }, 13000);
 
-    const funnyMessages = ["أدري ودك تضغطين نعم!", "ما فيه مفر يا ستيلا 😂", "حاولي مرة ثانية..", "ليش تحاولين؟", "مستحيل تضغطينه!"];
+    const funnyMessages = ["ماتقدري تظغطي😂"];
     const noBtn = document.getElementById('noBtn');
 
     const moveBtn = (e) => {
